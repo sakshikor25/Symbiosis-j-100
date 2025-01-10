@@ -1,0 +1,39 @@
+
+<header>
+    <h3>Course History</h3>
+     <nav>
+         <h1 routerLink="/servicehistory">Service History</h1>
+     </nav>
+</header>
+    
+ <br><br>
+    <div class="container">
+        
+
+        <h1>Upcoming courses</h1>
+        <table>
+            <thead>
+                <tr>
+                <th>Booking ID</th>
+                <th>Date</th>
+                <th>clientname</th>
+                <th>email</th>
+                <th>courses</th>
+                </tr>
+            </thead>
+			  <tbody> 
+                 <tr *ngFor="let booking of bookings.body">
+                    <td>{{booking.bookingId}}</td>
+                    <td>{{booking.bookingDate | date}}</td>
+                    <td>{{booking.clientName}}</td>
+                    <td>{{booking.clientEmail}}</td>
+                    <td>{{booking.courseName}}</td>
+                 </tr>
+             </tbody> 
+        </table>
+    </div>
+
+
+
+
+
